@@ -19,10 +19,10 @@ void DelList(LinkedList* L, int local);
 int main() {
     LinkedList* test = CreateListL(3);
     ShowList(test);
-    InsList(test, 2, 2);
-    ShowList(test);
-    DelList(test, 4);
-    ShowList(test);
+    // InsList(test, 2, 2);
+    // ShowList(test);
+    // DelList(test, 4);
+    // ShowList(test);
     //SearchValue(test, 2);
     //SearchLocal(test, 2);
     return 0;
@@ -79,35 +79,36 @@ LinkedList* CreateListL(int n) {
         cout << "请输入正确的长度" << endl;
         return 0;
     }
-    LinkedList* head;
+    // LinkedList* head;
+    // LinkedList* work;
+    // int i;
+    // for (i = 0; i < n; i++) {
+    //     cout << "请输入第" << i+1 << "位的数据：" ;
+    //     if (i == 0) {
+    //         head = CreateNewCode();
+    //         work = CreateNewCode();
+    //         cin >> head->data;
+    //         head->next = work;
+    //     } else {
+    //         cin >> work->data;
+    //         LinkedList* temp = CreateNewCode();
+    //         work->next = temp;
+    //         work = temp;
+    //     }
+    // }
+    LinkedList* head = CreateNewCode();
     LinkedList* work;
+    LinkedList* temp;
+    work = head;
     int i;
     for (i = 0; i < n; i++) {
         cout << "请输入第" << i+1 << "位的数据：" ;
-        if (i == 0) {
-            head = CreateNewCode();
-            work = CreateNewCode();
-            cin >> head->data;
-            head->next = work;
-        } else {
-            cin >> work->data;
-            LinkedList* temp = CreateNewCode();
-            work->next = temp;
-            work = temp;
-        }
+        if (i == 0) cin >> head->data;
+        else cin >> temp->data;
+        temp = CreateNewCode();
+        work->next = temp;
+        work = temp;
     }
-    // LinkedList* head;
-    // LinkedList* work;
-    // head = work;
-    // int i;
-    // for (i = 0; i < n; i++) {
-    //     work = CreateNewCode();
-    //     LinkedList* temp = CreateNewCode();
-    //     cout << "请输入第" << i+1 << "位的数据：" ;
-    //     cin >> temp->data;
-    //     work->next = temp;
-    //     work = temp;
-    // }
     return head;
 }
 
