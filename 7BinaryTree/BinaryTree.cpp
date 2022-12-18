@@ -20,6 +20,8 @@ int GetLeafNumber(BinaryTree* root);
 int GetNodeNumber(BinaryTree* root);
 int GetTreeDepth(BinaryTree* root);
 
+void temp(BinaryTree* root);
+
 int main() {
     char data[] = {'1', '2', '3', ' ', ' ', '6', '7'};
     int size = sizeof(data) / sizeof(data[0]);
